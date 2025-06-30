@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💕 Feliz Aniversário, Meu Amor! 💕</title>
+    <link rel="stylesheet" href="aniver.css">
+</head>
+<body>
+    <!-- Seção 1: Entrada Romântica -->
+    <section class="romantic-intro" id="section1">
+        <div class="hearts-background"></div>
+        <div class="intro-content">
+            <h1 class="romantic-title">💖 Para a Pessoa Mais Especial 💖</h1>
+            <p class="intro-text">Hoje é um dia muito especial...</p>
+            <p class="intro-text">E eu preparei algo único para você!</p>
+            <button class="romantic-btn" onclick="startJourney()">
+                Começar a Surpresa ✨
+            </button>
+        </div>
+        <div class="floating-hearts">
+            <div class="heart heart-1">💕</div>
+            <div class="heart heart-2">💖</div>
+            <div class="heart heart-3">💝</div>
+            <div class="heart heart-4">💗</div>
+            <div class="heart heart-5">💓</div>
+        </div>
+    </section>
+
+    <!-- Seção 2: Brincadeira dos Corações -->
+    <section class="heart-game hidden" id="section2">
+        <div class="rose-petals"></div>
+        <div class="game-content">
+            <h2 class="section-title">💕 Encontre Meu Coração 💕</h2>
+            <p class="game-instruction">Clique no coração</p>
+            <div class="hearts-container">
+                <div class="clickable-heart" onclick="heartClicked(this, false)">🖤</div>
+                <div class="clickable-heart" onclick="heartClicked(this, false)">🖤</div>
+                <div class="clickable-heart special-heart" onclick="heartClicked(this, true)">❤️</div>
+                <div class="clickable-heart" onclick="heartClicked(this, false)">🖤</div>
+                <div class="clickable-heart" onclick="heartClicked(this, false)">🖤</div>
+            </div>
+            <div class="game-message" id="heartMessage"></div>
+        </div>
+    </section>
+
+    <!-- Seção 3: Mensagens Escondidas -->
+    <section class="hidden-messages hidden" id="section3">
+        <div class="stars-background"></div>
+        <div class="messages-content">
+            <h2 class="section-title">✨ Mensagens do Coração ✨</h2>
+            <p class="instruction">Clique nas estrelas para revelar mensagens especiais!</p>
+            <div class="stars-container">
+                <div class="star" onclick="revealMessage(0)">⭐</div>
+                <div class="star" onclick="revealMessage(1)">⭐</div>
+                <div class="star" onclick="revealMessage(2)">⭐</div>
+                <div class="star" onclick="revealMessage(3)">⭐</div>
+                <div class="star" onclick="revealMessage(4)">⭐</div>
+            </div>
+            <div class="message-display" id="messageDisplay">
+                <p>Clique em uma estrela para ver uma mensagem especial! 🌟</p>
+            </div>
+            <button class="continue-btn hidden" id="continueBtn" onclick="nextSection()">
+                Continuar a Jornada 💖
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção 4: Brincadeira das Rosas -->
+    <section class="rose-game hidden" id="section4">
+        <div class="garden-background"></div>
+        <div class="rose-content">
+            <h2 class="section-title">🌹 Jardim do Amor 🌹</h2>
+            <p class="instruction">Regue as rosas com seu amor! Clique nelas para fazê-las florescer!</p>
+            <div class="roses-container">
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+                <div class="rose-bud" onclick="bloomRose(this)">🥀</div>
+            </div>
+            <div class="rose-counter">
+                <span id="bloomedCount">0</span>/6 rosas floresceram 🌹
+            </div>
+            <button class="continue-btn hidden" id="rosesContinue" onclick="finalSection()">
+                Ver a Surpresa Final 💝
+            </button>
+        </div>
+    </section>
+
+    <!-- Seção 5: Feliz Aniversário Final -->
+    <section class="birthday-finale hidden" id="section5">
+        <div class="celebration-background"></div>
+        <div class="finale-content">
+            <h1 class="birthday-title">🎉 FELIZ ANIVERSÁRIO! 🎉</h1>
+            <div class="cake-container">
+                <div class="birthday-cake" onclick="blowCandles()">🎂</div>
+                <p class="cake-instruction" id="cakeInstruction">Clique no bolo para soprar as velas! 🕯️</p>
+            </div>
+            
+            <div class="birthday-messages">
+                <div class="message-card">
+                    <h3>💖 Para Você, Meu Amor</h3>
+                    <p>Hoje celebramos não apenas mais um ano da sua vida, mas cada momento mágico que você traz, para as vidas da pessoas que te ama.</p>
+                </div>
+                
+                <div class="message-card">
+                    <h3>🌟 Meus Desejos Para Você</h3>
+                    <p>Que este novo ano seja repleto de alegrias infinitas, sonhos realizados e momentos inesquecíveis.</p>
+                </div>
+                
+            
+            <div class="final-surprise hidden" id="finalSurprise">
+                <h2 class="surprise-title">🎁 Sua Surpresa Especial! 🎁</h2>
+                <div class="surprise-content">
+                    <p class="surprise-text">Parabéns por completar nossa jornada de amor! 💕</p>
+                    <p class="surprise-text">Você é incrível, especial e merece todo o amor do mundo!</p>
+                    <div class="love-explosion">
+                        <span class="explosion-heart">💖</span>
+                        <span class="explosion-heart">💕</span>
+                        <span class="explosion-heart">💝</span>
+                        <span class="explosion-heart">💗</span>
+                        <span class="explosion-heart">💓</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="ani.js"></script>
+</body>
+</html>

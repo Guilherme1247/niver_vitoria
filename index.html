@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coração de Partículas ❤️</title>
+    <link rel="stylesheet" href="comeco.css">
+</head>
+<body>
+    <div class="loading-container">
+        <canvas id="heartCanvas"></canvas>
+        <div class="loading-text">
+            
+            <div class="dots">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Tela do Celular com Brincadeira -->
+    <div class="phone-screen" id="phoneScreen">
+        <div class="phone-container">
+            <div class="phone-header">
+                <div class="status-bar">
+                    <span class="time">14:30</span>
+                    <div class="status-icons">
+                        <span class="signal">📶</span>
+                        <span class="wifi">📶</span>
+                        <span class="battery">🔋</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="phone-content">
+                <div class="app-header">
+                    <h2>💕 Mensagem Especial 💕</h2>
+                </div>
+                
+                <div class="message-bubble">
+                    <p>Olá, pessoa especial! 🌟</p>
+                    <p>Tenho uma surpresa incrível para você...</p>
+                    <p>Mas primeiro, você precisa clicar no botão abaixo! 😊</p>
+                </div>
+                
+                <div class="game-area">
+                    <div class="attempt-info" id="attemptInfo" style="display: none;">
+                        <span>Tentativa: <span id="attemptCount">1</span>/5</span>
+                    </div>
+                    
+                    <button class="magic-button" id="magicButton" onclick="handleButtonClick()">
+                        Clique aqui! ❤️
+                    </button>
+                    
+                    <div class="game-message" id="gameMessage"></div>
+                </div>
+            </div>
+            
+            <div class="phone-footer">
+                <div class="home-indicator"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="dex.js">
+    </script>
+</body>
+</html>
